@@ -5,7 +5,16 @@ Orchestrator platform. No Python required. This repository holds the release
 binaries and installers only — not the source.
 
 Supported: **Linux** (x86_64, arm64 — glibc ≥ 2.28: Rocky/RHEL/Alma 8+9, Ubuntu
-20.04+, Debian 10+, Mint 20+) and **Windows** (x86_64). macOS builds are coming.
+20.04+, Debian 10+, Mint 20+), **Windows** (x86_64), and **macOS** (Apple silicon
++ Intel).
+
+> **macOS note:** the macOS binaries are not yet code-signed/notarized (Developer ID
+> signing is coming). Installs via the script below or Homebrew run with no extra
+> steps. If you instead download a `.tar.gz` manually through a browser, macOS
+> quarantines it and Gatekeeper will block it — clear the quarantine flag once:
+> ```sh
+> xattr -dr com.apple.quarantine <path-to-extracted-symbiote-dir>
+> ```
 
 ## Install
 
